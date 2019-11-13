@@ -26,13 +26,6 @@
     "widget",
     "react-component"
   ],
-  "scripts": {
-    "clean": "../node_modules/.bin/rimraf lib",
-    "build": "yarn clean && yarn build:js && yarn build:css",
-    "build:js": "../node_modules/.bin/rollup --config ../rollup.config.js",
-    "build:css": "node ../scripts/build-css.js $(pwd)",
-    "prepublish": "yarn build"
-  },
   "license": "MIT",
   "dependencies": {
     "clsx": "^1.0.4",
