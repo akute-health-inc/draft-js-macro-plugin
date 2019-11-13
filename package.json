@@ -7,15 +7,21 @@
     "email": "info@akutehealth.com",
     "url": "https://www.akutehealth.com"
   },
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "compile": "npm run build",
+    "precompile": "npm run clean",
+    "prepublish": "npm run compile",
+    "test": "NODE_ENV=test babel-node test | faucet",
+    "posttest": "npm run lint",
+    "clean": "rm -rf ./lib/*",
+    "lint": "eslint 'src/*.js' 'src/**/*.js'; exit 0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/akute-health-inc/draft-js-macro-plugin.git"
   },
-  "main": "lib/index.cjs.js",
-  "module": "lib/index.esm.js",
-  "files": [
-    "lib"
-  ],
   "keywords": [
     "editor",
     "wysiwyg",
