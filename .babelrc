@@ -2,13 +2,21 @@
   "env": {
     "development": {
       "presets": [
-        "babel-preset-es2015"
-      ]
+        "babel-preset-es2015",
+        "babel-preset-react",
+        "@babel/preset-env",
+        { "useBuiltIns": "entry" }
+      ],
+      "plugins": ["transform-object-rest-spread"]
     },
     "test": {
       "presets": [
-        "babel-preset-es2015"
-      ]
+        "babel-preset-es2015",
+        "babel-preset-react",
+        "@babel/preset-env",
+        { "useBuiltIns": "entry" }
+      ],
+      "plugins": ["transform-object-rest-spread"]
     }
   }
 }
