@@ -1,16 +1,16 @@
-import React from 'react';
-import { Map } from 'immutable';
-import Mention from './Mention';
-import MentionSuggestions from './MentionSuggestions'; // eslint-disable-line import/no-named-as-default
-import MentionSuggestionsPortal from './MentionSuggestionsPortal';
-import defaultRegExp from './defaultRegExp';
-import mentionStrategy from './mentionStrategy';
-import mentionSuggestionsStrategy from './mentionSuggestionsStrategy';
-import suggestionsFilter from './utils/defaultSuggestionsFilter';
-import defaultPositionSuggestions from './utils/positionSuggestions';
-import { defaultTheme } from './theme.js';
+import React from "react";
+import { Map } from "immutable";
+import Mention from "./Mention";
+import MentionSuggestions from "./MentionSuggestions"; // eslint-disable-line import/no-named-as-default
+import MentionSuggestionsPortal from "./MentionSuggestionsPortal";
+import defaultRegExp from "./defaultRegExp";
+import mentionStrategy from "./mentionStrategy";
+import mentionSuggestionsStrategy from "./mentionSuggestionsStrategy";
+import suggestionsFilter from "./utils/defaultSuggestionsFilter";
+import defaultPositionSuggestions from "./utils/positionSuggestions";
+import { defaultTheme } from "./theme.js";
 
-export { default as MentionSuggestions } from './MentionSuggestions';
+export { default as MacroSuggestions } from "./MentionSuggestions";
 
 export { defaultTheme };
 
@@ -19,14 +19,14 @@ export default (config = {}) => {
     keyBindingFn: undefined,
     handleKeyCommand: undefined,
     handleReturn: undefined,
-    onChange: undefined,
+    onChange: undefined
   };
 
   const ariaProps = {
-    ariaHasPopup: 'false',
+    ariaHasPopup: "false",
     ariaExpanded: false,
     ariaOwneeID: undefined,
-    ariaActiveDescendantID: undefined,
+    ariaActiveDescendantID: undefined
   };
 
   let searches = Map();
@@ -64,7 +64,7 @@ export default (config = {}) => {
     getIsOpened: () => isOpened,
     setIsOpened: nextIsOpened => {
       isOpened = nextIsOpened;
-    },
+    }
   };
 
   // Styles are overwritten instead of merged as merging causes a lot of confusion.
@@ -74,15 +74,15 @@ export default (config = {}) => {
   // errors when upgrading as basically every styling change would become a major
   // breaking change. 1px of an increased padding can break a whole layout.
   const {
-    mentionPrefix = '',
+    mentionPrefix = "",
     theme = defaultTheme,
     positionSuggestions = defaultPositionSuggestions,
     mentionComponent,
     mentionSuggestionsComponent: MentionSuggestionsComponent = MentionSuggestions,
-    entityMutability = 'SEGMENTED',
-    mentionTrigger = '@',
+    entityMutability = "SEGMENTED",
+    mentionTrigger = "@",
     mentionRegExp = defaultRegExp,
-    supportWhitespace = false,
+    supportWhitespace = false
   } = config;
   const mentionSearchProps = {
     ariaProps,
@@ -92,7 +92,7 @@ export default (config = {}) => {
     entityMutability,
     positionSuggestions,
     mentionTrigger,
-    mentionPrefix,
+    mentionPrefix
   };
   const DecoratedMentionSuggestionsComponent = props => (
     <MentionSuggestionsComponent {...props} {...mentionSearchProps} />
@@ -108,7 +108,7 @@ export default (config = {}) => {
     decorators: [
       {
         strategy: mentionStrategy(mentionTrigger),
-        component: DecoratedMention,
+        component: DecoratedMention
       },
       {
         strategy: mentionSuggestionsStrategy(
@@ -116,16 +116,16 @@ export default (config = {}) => {
           supportWhitespace,
           mentionRegExp
         ),
-        component: DecoratedMentionSuggestionsPortal,
-      },
+        component: DecoratedMentionSuggestionsPortal
+      }
     ],
     getAccessibilityProps: () => ({
-      role: 'combobox',
-      ariaAutoComplete: 'list',
+      role: "combobox",
+      ariaAutoComplete: "list",
       ariaHasPopup: ariaProps.ariaHasPopup,
       ariaExpanded: ariaProps.ariaExpanded,
       ariaActiveDescendantID: ariaProps.ariaActiveDescendantID,
-      ariaOwneeID: ariaProps.ariaOwneeID,
+      ariaOwneeID: ariaProps.ariaOwneeID
     }),
 
     initialize: ({ getEditorState, setEditorState }) => {
@@ -140,7 +140,7 @@ export default (config = {}) => {
     onChange: editorState => {
       if (callbacks.onChange) return callbacks.onChange(editorState);
       return editorState;
-    },
+    }
   };
 };
 
