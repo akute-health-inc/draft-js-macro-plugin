@@ -9,14 +9,9 @@
   },
   "main": "lib/index.cjs.js",
   "scripts": {
-    "build": "babel src --out-dir lib",
-    "compile": "npm run build",
-    "precompile": "npm run clean",
-    "prepublish": "npm run compile",
-    "test": "NODE_ENV=test babel-node test | faucet",
-    "posttest": "npm run lint",
-    "clean": "rm -rf ./lib/*",
-    "lint": "eslint 'src/*.js' 'src/**/*.js'; exit 0"
+    "build": "yarn build:js && yarn build:css",
+    "build:js": "./node_modules/.bin/rollup --config rollup.config.js",
+    "build:css": "./scripts/build-css.js $(pwd)"
   },
   "repository": {
     "type": "git",
