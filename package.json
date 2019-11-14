@@ -1,26 +1,47 @@
 {
-  "name": "draft-js-macro-plugin",
-  "version": "1.0.0",
-  "description": "Macro Plugin for DraftJS",
-  "author": {
-    "name": "Sharud Agarwal",
-    "email": "info@akutehealth.com",
-    "url": "https://www.akutehealth.com"
+  "_from": "draft-js-macro-plugin",
+  "_id": "draft-js-macro-plugin@3.1.5",
+  "_inBundle": false,
+  "_location": "/draft-js-macro-plugin",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "draft-js-macro-plugin",
+    "name": "draft-js-macro-plugin",
+    "escapedName": "draft-js-macro-plugin",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
   },
-  "main": "lib/index.cjs.js",
-  "module": "lib/index.esm.js",
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_spec": "draft-js-macro-plugin",
+  "_where": "/Users/agarwals/Developer/acute/oneHealthOS/ehr/src",
+  "author": {
+    "name": "Nik Graf",
+    "email": "nik@nikgraf.com",
+    "url": "http://www.nikgraf.com"
+  },
+  "bugs": {
+    "url": "https://github.com/draft-js-plugins/draft-js-plugins/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "clsx": "^1.0.4",
+    "immutable": "~3.7.4",
+    "lodash": "^4.17.14",
+    "prop-types": "^15.5.8",
+    "union-class-names": "^1.0.0"
+  },
+  "deprecated": false,
+  "description": "Mention Plugin for DraftJS",
   "files": [
     "lib"
   ],
-  "scripts": {
-    "build": "yarn build:js && yarn build:css",
-    "build:js": "./node_modules/.bin/rollup --config rollup.config.js",
-    "build:css": "node ./scripts/build-css.js $(pwd)"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/akute-health-inc/draft-js-macro-plugin.git"
-  },
+  "homepage": "https://github.com/draft-js-plugins/draft-js-plugins#readme",
   "keywords": [
     "editor",
     "wysiwyg",
@@ -32,77 +53,23 @@
     "react-component"
   ],
   "license": "MIT",
-  "dependencies": {
-    "clsx": "^1.0.4",
-    "immutable": "~3.7.4",
-    "lodash": "^4.17.14",
-    "lodash-es": "^4.17.15",
-    "prop-types": "^15.5.8"
-  },
+  "main": "lib/index.js",
+  "name": "draft-js-macro-plugin",
   "peerDependencies": {
     "draft-js": "^0.10.1 || ^0.11.0",
-    "react": "^16.3.0"
+    "react": "^15.5.0 || ^16.0.0-rc",
+    "react-dom": "^15.5.0 || ^16.0.0-rc"
   },
-  "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/preset-flow": "^7.0.0",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/register": "^7.5.5",
-    "@storybook/react": "^5.1.11",
-    "alex": "^4.0.1",
-    "animateplus": "^1.4.0",
-    "autoprefixer": "^6.7.6",
-    "babel-eslint": "^10.0.3",
-    "babel-loader": "^8.0.6",
-    "babel-plugin-transform-rename-import": "^2.3.0",
-    "chai": "^3.5.0",
-    "chai-enzyme": "^1.0.0-beta.1",
-    "cheerio": "^0.22.0",
-    "cpx": "^1.5.0",
-    "css-loader": "^0.26.2",
-    "css-modules-require-hook": "^4.0.2",
-    "dirty-chai": "^1.2.2",
-    "draft-js-buttons": "latest",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
-    "eslint": "^6.2.2",
-    "eslint-config-airbnb": "^14.1.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-mocha": "^4.8.0",
-    "eslint-plugin-react": "^6.10.0",
-    "estraverse-fb": "^1.3.1",
-    "express": "^4.15.0",
-    "extract-text-webpack-plugin": "^2.0.0",
-    "flow-bin": "^0.69.0",
-    "husky": "^3.0.4",
-    "jsdom": "^11.3.0",
-    "linaria": "^1.4.0-alpha.1",
-    "lint-staged": "^9.2.3",
-    "matched": "^4.0.0",
-    "mocha": "^3.0.2",
-    "multer": "^1.3.0",
-    "postcss-loader": "^1.3.3",
-    "prettier": "^1.18.2",
-    "prismjs": "^1.5.1",
-    "react-addons-pure-render-mixin": "^15.5.2",
-    "react-addons-test-utils": "^15.5.1",
-    "react-router": "^3.0.2",
-    "react-static-webpack-plugin": "2.1.0",
-    "react-transform-catch-errors": "^1.0.2",
-    "react-transform-hmr": "^1.0.4",
-    "redbox-react": "^1.3.4",
-    "rimraf": "^2.6.1",
-    "rollup": "^1.20.3",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "sinon": "^1.17.7",
-    "sinon-chai": "^2.8.0",
-    "style-loader": "^0.13.2",
-    "superagent": "^3.5.0",
-    "webpack": "^2.2.1",
-    "webpack-dev-middleware": "^1.10.1",
-    "webpack-hot-middleware": "^2.17.1"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/draft-js-plugins/draft-js-plugins.git"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run build:js && npm run build:css",
+    "build:css": "node ../scripts/concatCssFiles $(pwd) && ../node_modules/.bin/rimraf lib-css",
+    "build:js": "WEBPACK_CONFIG=$(pwd)/webpack.config.js BABEL_DISABLE_CACHE=1 BABEL_ENV=production NODE_ENV=production ../node_modules/.bin/babel --out-dir='lib' --ignore='__test__/*' src",
+    "clean": "../node_modules/.bin/rimraf lib",
+    "prepublish": "npm run build"
+  },
+  "version": "3.1.5"
 }
