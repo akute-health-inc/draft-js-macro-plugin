@@ -1,26 +1,16 @@
-.draftJsMentionPlugin__mention__29BEd,
-.draftJsMentionPlugin__mention__29BEd:visited {
-  /* color: #575f67;
-  cursor: pointer; */
+.draftJsMentionPlugin__mention__29BEd, .draftJsMentionPlugin__mention__29BEd:visited {
   display: inline-block;
-  /* background: #e6f3ff; */
   padding-left: 2px;
   padding-right: 2px;
   border-radius: 2px;
   text-decoration: none;
 }
 
-.draftJsMentionPlugin__mention__29BEd:hover,
-.draftJsMentionPlugin__mention__29BEd:focus {
-  /* color: #677584; */
-  background: #edf5fd;
-  outline: 0; /* reset for :focus */
+.draftJsMentionPlugin__mention__29BEd:hover, .draftJsMentionPlugin__mention__29BEd:focus {
+  outline: 0;
+  /* reset for :focus */
 }
 
-.draftJsMentionPlugin__mention__29BEd:active {
-  /* color: #222;
-  background: #455261; */
-}
 .draftJsMentionPlugin__mentionSuggestionsEntry__3mSwm {
   padding: 7px 10px 3px 10px;
   transition: background-color 0.4s cubic-bezier(0.27, 1.27, 0.48, 0.56);
@@ -51,6 +41,7 @@
   height: 24px;
   border-radius: 12px;
 }
+
 .draftJsMentionPlugin__mentionSuggestions__2DWjA {
   border: 1px solid #eee;
   margin-top: 0.4em;
