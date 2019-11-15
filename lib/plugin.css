@@ -1,9 +1,9 @@
 .draftJsMacroPlugin__mention__29BEd,
 .draftJsMacroPlugin__mention__29BEd:visited {
-  /* color: #575f67;
-  cursor: pointer; */
+  color: #575f67;
+  cursor: pointer;
   display: inline-block;
-  /* background: #e6f3ff; */
+  background: #e6f3ff;
   padding-left: 2px;
   padding-right: 2px;
   border-radius: 2px;
@@ -12,14 +12,14 @@
 
 .draftJsMacroPlugin__mention__29BEd:hover,
 .draftJsMacroPlugin__mention__29BEd:focus {
-  /* color: #677584; */
+  color: #677584;
   background: #edf5fd;
   outline: 0; /* reset for :focus */
 }
 
 .draftJsMacroPlugin__mention__29BEd:active {
-  /* color: #222;
-  background: #455261; */
+  color: #222;
+  background: #455261;
 }
 .draftJsMacroPlugin__mentionSuggestionsEntry__3mSwm {
   padding: 7px 10px 3px 10px;
