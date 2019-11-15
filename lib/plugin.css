@@ -1,30 +1,40 @@
-.draftJsMentionPlugin__mention__29BEd, .draftJsMentionPlugin__mention__29BEd:visited {
+.draftJsMacroPlugin__mention__29BEd,
+.draftJsMacroPlugin__mention__29BEd:visited {
+  /* color: #575f67;
+  cursor: pointer; */
   display: inline-block;
+  /* background: #e6f3ff; */
   padding-left: 2px;
   padding-right: 2px;
   border-radius: 2px;
   text-decoration: none;
 }
 
-.draftJsMentionPlugin__mention__29BEd:hover, .draftJsMentionPlugin__mention__29BEd:focus {
-  outline: 0;
-  /* reset for :focus */
+.draftJsMacroPlugin__mention__29BEd:hover,
+.draftJsMacroPlugin__mention__29BEd:focus {
+  /* color: #677584; */
+  background: #edf5fd;
+  outline: 0; /* reset for :focus */
 }
 
-.draftJsMentionPlugin__mentionSuggestionsEntry__3mSwm {
+.draftJsMacroPlugin__mention__29BEd:active {
+  /* color: #222;
+  background: #455261; */
+}
+.draftJsMacroPlugin__mentionSuggestionsEntry__3mSwm {
   padding: 7px 10px 3px 10px;
   transition: background-color 0.4s cubic-bezier(0.27, 1.27, 0.48, 0.56);
 }
 
-.draftJsMentionPlugin__mentionSuggestionsEntry__3mSwm:active {
+.draftJsMacroPlugin__mentionSuggestionsEntry__3mSwm:active {
   background-color: #cce7ff;
 }
 
-.draftJsMentionPlugin__mentionSuggestionsEntryFocused__3LcTd {
+.draftJsMacroPlugin__mentionSuggestionsEntryFocused__3LcTd {
   background-color: #e6f3ff;
 }
 
-.draftJsMentionPlugin__mentionSuggestionsEntryText__3Jobq {
+.draftJsMacroPlugin__mentionSuggestionsEntryText__3Jobq {
   display: inline-block;
   margin-left: 8px;
   white-space: nowrap;
@@ -35,14 +45,13 @@
   margin-bottom: 0.2em;
 }
 
-.draftJsMentionPlugin__mentionSuggestionsEntryAvatar__1xgA9 {
+.draftJsMacroPlugin__mentionSuggestionsEntryAvatar__1xgA9 {
   display: inline-block;
   width: 24px;
   height: 24px;
   border-radius: 12px;
 }
-
-.draftJsMentionPlugin__mentionSuggestions__2DWjA {
+.draftJsMacroPlugin__mentionSuggestions__2DWjA {
   border: 1px solid #eee;
   margin-top: 0.4em;
   position: absolute;
