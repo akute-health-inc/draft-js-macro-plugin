@@ -68,8 +68,11 @@
     "build": "npm run clean && npm run build:js && npm run build:css",
     "build:css": "node ../scripts/concatCssFiles $(pwd) && ../node_modules/.bin/rimraf lib-css",
     "build:js": "WEBPACK_CONFIG=$(pwd)/webpack.config.js BABEL_DISABLE_CACHE=1 BABEL_ENV=production NODE_ENV=production ../node_modules/.bin/babel --out-dir='lib' --ignore='__test__/*' src",
-    "clean": "../node_modules/.bin/rimraf lib",
+    "clean": "rimraf lib",
     "prepublish": "npm run build"
   },
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "devDependencies": {
+    "rimraf": "^3.0.2"
+  }
 }
